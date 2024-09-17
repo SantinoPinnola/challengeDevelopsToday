@@ -28,17 +28,17 @@ const CountriesList = () => {
     >
       <Container maxWidth="sm">
         <Typography variant="h3" component="h1" align="center" gutterBottom>
-          Lista de Países
+          Country list
         </Typography>
-        {/* Caja para hacer la lista scrolleable */}
+
         <Box
           sx={{
-            maxHeight: "400px", // Altura máxima para la caja
-            overflowY: "auto", // Habilitar scroll vertical
-            border: "1px solid #e0e0e0", // Opcional: para darle un borde
+            maxHeight: "400px",
+            overflowY: "auto",
+            border: "1px solid #e0e0e0",
             padding: "10px",
-            borderRadius: "8px", // Bordes redondeados
-            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Sombra ligera
+            borderRadius: "8px",
+            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
           }}
         >
           <List>

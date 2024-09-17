@@ -8,7 +8,7 @@ export const getAvailableCountries = async (req, res) => {
     );
     res.json(data);
   } catch (error) {
-    res.status(500).json({ error: "Error al obtener la lista de países" });
+    res.status(500).json({ error: "Error getting countries from the list" });
   }
 };
 
@@ -45,6 +45,6 @@ export const getCountryInfo = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Error al obtener la información del país" });
+    res.status(500).json({ error: "Error getting country information." });
   }
 };

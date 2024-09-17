@@ -26,7 +26,7 @@ const CountryInfo = () => {
     }
   }, [code]);
 
-  if (!countryInfo) return <p>Cargando...</p>;
+  if (!countryInfo) return <p>Loading...</p>;
   console.log("LA COUNTRY INFO ES", countryInfo.population.country);
   return (
     <Grid
@@ -50,12 +50,12 @@ const CountryInfo = () => {
           </Typography>
           <img
             src={countryInfo.flagUrl}
-            alt={`Bandera de ${countryInfo.population.country}`}
+            alt={`Flag of ${countryInfo.population.country}`}
             width={150}
           />
 
           <Typography variant="h5" gutterBottom>
-            Países Fronterizos
+            Border countries
           </Typography>
           <List>
             {countryInfo.borders.map((border) => (
@@ -66,12 +66,12 @@ const CountryInfo = () => {
           </List>
 
           <Typography variant="h5" gutterBottom>
-            Historial de Población
+            Population History
           </Typography>
           <PopulationChart populationData={countryInfo.population} />
         </Box>
         <Button variant="contained" color="secondary">
-          <Link href="/">Volver a la lista de países</Link>
+          <Link href="/">Go back to the country list</Link>
         </Button>
       </Container>
     </Grid>

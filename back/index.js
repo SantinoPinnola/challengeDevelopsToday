@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import countriesRoutes from "./src/routes/countries.js";
 import cors from "cors";
 
-dotenv.config(); // Cargar las variables de entorno
+dotenv.config();
 
 const app = express();
 app.use(cors());
