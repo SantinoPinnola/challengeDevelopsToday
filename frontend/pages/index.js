@@ -13,7 +13,7 @@ const CountriesList = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/countries/available")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/countries/available`)
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);

@@ -20,7 +20,7 @@ const CountryInfo = () => {
 
   useEffect(() => {
     if (code) {
-      fetch(`http://localhost:5000/api/countries/${code}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/countries/${code}`)
         .then((res) => res.json())
         .then((data) => setCountryInfo(data));
     }
